@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input type="text" id="task-input" placeholder="Enter a new task">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="task-list"></ul>
+  <button onclick="filterTasks('all')">Show All</button>
+  <button onclick="filterTasks('completed')">Show Completed</button>
+
+  <script src="./quokka.js"> </script>
+</body>
+</html>

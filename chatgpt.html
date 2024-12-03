@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Practice</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .container {
+        width: 100%;
+        max-width: 600px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card {
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    h2 {
+        color: #333;
+    }
+    p {
+        color: #555;
+    }
+    button {
+        padding: 10px 15px;
+        margin-top: 10px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>JavaScript Function Practice</h2>
+    <div class="card">
+        <h3 id="greeting"></h3>
+        <button onclick="showGreeting()">Show Greeting</button>
+    </div>
+    <div class="card">
+        <h3> Random Number</h3>
+        <p id="randomNumber">Click the button to generate a number</p>
+        <button onclick="generateRandomNumber()">Generate Number</button>
+    </div>
+    <div class="card">
+        <h3>User Info</h3>
+        <p id="userInfo">Click the button to load user info</p>
+        <button onclick="loadUserInfo()">Load User Info</button>
+    </div>
+</div>
+
+<script>
+    function showGreeting() {
+      const buttonElement = document.getElementById('greeting');
+
+      buttonElement.innerHTML = "hello welcome"
+    }
+
+    function generateRandomNumber() {
+     
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+
+
+      const numberElement = document.getElementById('randomNumber');
+
+      numberElement.innerText = randomNumber;
+    }
+
+    function loadUserInfo() {
+      const userInfoElement = document.getElementById('userInfo');
+
+      const userInfo = {
+        name : 'martijn',
+        age : 28,
+        street : 'thorbeckestraat'
+
+      }
+
+      userInfoElement.innerText = `Name ${userInfo.name}, Age ${userInfo.age}, street ${userInfo.street}`
+    }
+
+   
+
+    
+
+
+
+</script>
+
+</body>
+</html>

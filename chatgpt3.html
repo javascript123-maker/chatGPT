@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .exercise {
+      margin-bottom: 30px;
+    }
+    .output {
+      font-weight: bold;
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Practice</h1>
+
+  <div class="exercise">
+    <h2>Exercise 1: Add Numbers</h2>
+    <p>Result: <span id="add-result" class="output"></span></p>
+    <script>
+
+      addNumbers();
+      
+
+      function addNumbers() {
+        const number1 = 1;
+        const number2 = 2;
+
+        const sumNumbers = number1 + number2;
+
+        document.getElementById('add-result').innerText = sumNumbers;
+      }
+    </script>
+  </div>
+
+  <div class="exercise">
+    <h2>Exercise 2: Reverse a String</h2>
+    <p>Result: <span id="reverse-result" class="output"></span></p>
+    <script>
+      reverseString(); // Call the function (you need to define it)
+
+      function reverseString() {
+        const string = "hello world"
+
+        const reverse = string.split('').reverse().join('');
+
+        document.getElementById('reverse-result').innerText = reverse;
+      }
+    </script>
+  </div>
+
+  <div class="exercise">
+    <h2>Exercise 3: Filter Even Numbers</h2>
+    <p>Result: <span id="filter-result" class="output"></span></p>
+    <script>
+     function filterEvenNumbers() {
+
+        const nums = [10, 8, 5, 3, 6];
+
+        const filter = nums.filter((nums) => nums % 2 === 0);
+
+        document.getElementById('filter-result').innerText = filter;
+
+
+      }
+
+
+    </script>
+  </div>
+
+  <div class="exercise">
+    <h2>Exercise 4: Format Date</h2>
+    <p>Today's Date: <span id="date-result" class="output"></span></p>
+    <script>
+      formatDate(); // Call the function (you need to define it)
+    </script>
+  </div>
+</body>
+</html>

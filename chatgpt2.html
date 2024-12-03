@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Practice</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+        line-height: 1.6;
+    }
+    .task {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    p, span {
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<h1>JavaScript Practice Tasks</h1>
+<p>Click the buttons to trigger JavaScript functions. Your task is to define these functions in the script section below!</p>
+
+<div class="task">
+    <h2>Task 1: Calculate Total Price</h2>
+    <p>Define a function to calculate the total price of items in a cart.</p>
+    <p>Items: $10, $20, $30</p>
+    <button onclick="calculateTotal()">Calculate Total</button>
+    <p id="totalPrice"></p>
+</div>
+
+<div class="task">
+    <h2>Task 2: Generate Random Colors</h2>
+    <p>Define a function to generate a random RGB color and display it here:</p>
+    <button onclick="generateRandomColor()">Generate Color</button>
+    <p id="randomColor" style=" color: #555; padding: 10px; border: 1px solid #ddd; background-color: #f1f1f1;"></p>
+</div>
+
+<div class="task">
+    <h2>Task 3: Display Current Date</h2>
+    <p>Define a function to display the current date in the format "Day, Month Date, Year".</p>
+    <button onclick="showCurrentDate()">Show Date</button>
+    <p id="currentDate"></p>
+</div>
+
+<div class="task">
+    <h2>Task 4: Reverse a String</h2>
+    <p>Define a function to reverse a string. Input: "Hello World"</p>
+    <button onclick="reverseString()">Reverse String</button>
+    <p id="reversedString"></p>
+</div>
+
+<div class="task">
+  <h2>Task 5: </h2>
+</div>
+
+<script>
+    
+  
+function calculateTotal() {
+    const arr = [10, 20, 30];
+
+    const total = arr.reduce((acc, curr) => acc + curr, 0);
+    
+    document.getElementById('totalPrice').innerText = `total is ${total}`
+}
+
+function generateRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    const color = `rgb(${r}, ${g}, ${b})`
+
+    document.getElementById('randomColor').textContent = `color : ${color}`;
+    document.getElementById('randomColor').style.backgroundColor = color;
+}
+
+function showCurrentDate() {
+    const date = new Date();
+}
+
+
+
+
+
+  
+
+
+
+
+   
+</script>
+
+</body>
+</html>
